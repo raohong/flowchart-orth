@@ -1,0 +1,61 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.node.node-allow-connect {
+  cursor: default;
+  box-shadow: 0 0 20px #2486ff;
+}
+
+.node.node-disable-connect {
+  cursor: no-drop;
+}
+
+.node-content:hover {
+  fill: lightblue;
+}
+
+.port {
+  cursor: crosshair;
+  stroke-width: none;
+
+  &-default {
+    fill: #fff;
+    stroke: lighten(#ff8ba7, 6%);
+  }
+
+  &-active {
+    visibility: hidden;
+    fill: #ff8ba7;
+  }
+
+  &:hover {
+    .port-default {
+      fill: none;
+      stroke-width: 0;
+    }
+    .port-active {
+      visibility: visible;
+    }
+  }
+}
